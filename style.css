@@ -4,6 +4,8 @@
     --accent-color: #e74c3c;
     --background-color: #ecf0f1;
     --text-color: #2c3e50;
+    --button-color: #9b59b6;
+    --button-hover-color: #8e44ad;
 }
 
 
@@ -15,6 +17,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,11 +52,12 @@ body {
 
 #tabulka {
     width: 100%;
+    border-collapse: collapse; /* Sbalí mezery mezi buňkami */  
 }
 
 #tabulka td, #tabulka th {
     border: 1px solid var(--text-color);
-    padding: 0.5rem;
+    padding: 0.6rem;
 }
 
 #vytvorit {
@@ -61,7 +65,7 @@ body {
     padding: 1rem;
     border: none;
     border-radius: 10px;
-    background-color: var(--primary-color);
+    background-color: var(--button-color);
     color: white;
     cursor: pointer;
     transition: 300ms ease-in-out;
@@ -69,10 +73,27 @@ body {
 }
 
 #vytvorit:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--button-hover-color);
     transform: scale(1.1);
 }
 
 #alerter {
     color: var(--accent-color);
+}
+
+#controls button {
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: white;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    font-weight: 700;
+}
+
+#controls button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.1);
 }
