@@ -52,11 +52,13 @@ body {
 
 #tabulka {
     width: 100%;
-    border-collapse: collapse; /* Sbalí mezery mezi buňkami */  
+    border-collapse: collapse; /* Sbalí mezery mezi buňkami */
+    border-spacing: 0; /* Nastaví mezery mezi buňkami na 0 */
+    border: 2px solid var(--text-color);
 }
 
-#tabulka td, #tabulka th {
-    border: 1px solid var(--text-color);
+#tabulka td{
+    border: 1px solid black;
     padding: 0.6rem;
 }
 
@@ -81,6 +83,12 @@ body {
     color: var(--accent-color);
 }
 
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #controls button {
     margin: 1rem;
     padding: 1rem;
@@ -91,6 +99,10 @@ body {
     cursor: pointer;
     transition: 300ms ease-in-out;
     font-weight: 700;
+}
+
+#controls i {
+    margin: 0 0.5rem;
 }
 
 #controls button:hover {
